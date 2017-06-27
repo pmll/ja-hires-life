@@ -1,0 +1,98 @@
+16384 15384 !
+
+create bitmap
+    144 allot
+
+16 base c!
+
+create left
+    05 c, CB c, 78 c, 28 c, 08 c, 06 c, 3F c, 7D c,
+    C6 c, 1F c, 6F c, 18 c, 05 c, CB c, 40 c, 28 c,
+    01 c, 2B c, 7E c, CB c, 7F c, 28 c, 01 c, 2F c,
+    CB c, 41 c, 28 c, 02 c, 1F c, 1F c, CB c, 40 c,
+    20 c, 01 c, 1F c, 1F c, D0 c, 1C c, C9 c,
+
+create right
+    04 c, CB c, 70 c, 28 c, 08 c, 06 c, 00 c, 7D c,
+    D6 c, 1F c, 6F c, 18 c, 05 c, CB c, 40 c, 20 c,
+    01 c, 23 c, 7E c, CB c, 7F c, 28 c, 01 c, 2F c,
+    CB c, 41 c, 28 c, 02 c, 1F c, 1F c, CB c, 40 c,
+    20 c, 01 c, 1F c, 1F c, D0 c, 1C c, C9 c,
+
+create up
+    0D c, CB c, 79 c, 28 c, 0A c, 0E c, 2F c, 7D c,
+    C6 c, E0 c, 6F c, 24 c, 24 c, 18 c, 0B c, CB c,
+    41 c, 28 c, 07 c, 7D c, D6 c, 20 c, 6F c, 30 c,
+    01 c, 25 c, 7E c, CB c, 7F c, 28 c, 01 c, 2F c,
+    CB c, 41 c, 28 c, 02 c, 1F c, 1F c, CB c, 40 c,
+    20 c, 01 c, 1F c, 1F c, D0 c, 1C c, C9 c,
+
+create down
+    0C c, 79 c, FE c, 30 c, 20 c, 0A c, 0E c, 00 c,
+    7D c, D6 c, E0 c, 6F c, 25 c, 25 c, 18 c, 0B c,
+    CB c, 41 c, 20 c, 07 c, 7D c, C6 c, 20 c, 6F c,
+    30 c, 01 c, 24 c, 7E c, CB c, 7F c, 28 c, 01 c,
+    2F c, CB c, 41 c, 28 c, 02 c, 1F c, 1F c, CB c,
+    40 c, 20 c, 01 c, 1F c, 1F c, D0 c, 1C c, C9 c,
+
+create neighbour-count
+    C5 c, E5 c, 1E c, 00 c, CD c, right , CD c,
+    down , CD c, left , CD c, left ,
+    CD c, up , CD c, up , CD c, right ,
+    CD c, right , E1 c, C1 c, C9 c,
+
+create update-world
+    21 c, 01 c, 27 c, E5 c, 21 c, 00 c, 24 c, 0E c,
+    00 c, 06 c, 00 c, 16 c, 01 c, CB c, 48 c, 20 c,
+    02 c, 16 c, 10 c, CB c, 41 c, 28 c, 04 c, CB c,
+    22 c, CB c, 22 c, CB c, 40 c, 20 c, 02 c, CB c,
+    22 c, CD c, neighbour-count , 7E c, CB c, 7F c, 28 c,
+    01 c, 2F c, CB c, 41 c, 28 c, 02 c, 1F c, 1F c,
+    CB c, 40 c, 20 c, 01 c, 1F c, 1F c, E3 c, 30 c,
+    0B c, 7B c, FE c, 02 c, 38 c, 0F c, FE c, 04 c,
+    30 c, 0B c, 18 c, 05 c, 7B c, FE c, 03 c, 20 c,
+    04 c, 7E c, B2 c, 18 c, 03 c, 7A c, 2F c, A6 c,
+    77 c, E3 c, CD c, right , 78 c, E6 c, 03 c,
+    20 c, 14 c, D1 c, 13 c, CB c, 41 c, 28 c, 0D c,
+    7B c, FE c, F1 c, 20 c, 08 c, 7A c, FE c, 27 c,
+    20 c, 03 c, 11 c, bitmap , D5 c, 78 c, FE c,
+    00 c, 20 c, 98 c, CD c, down , CB c, 41 c,
+    28 c, 09 c, D1 c, 7B c, D6 c, 10 c, 5F c, 30 c,
+    01 c, 15 c, D5 c, 79 c, FE c, 00 c, 20 c, 83 c,
+    E1 c, 11 c, 01 c, 27 c, 21 c, 00 c, 24 c, 0E c,
+    02 c, 06 c, C0 c, 1A c, CB c, 3F c, CB c, 3F c,
+    CB c, 3F c, CB c, 3F c, CB c, 5F c, 28 c, 04 c,
+    EE c, 0F c, F6 c, 80 c, F6 c, 10 c, 77 c, 23 c,
+    1A c, E6 c, 0F c, CB c, 5F c, 28 c, 04 c, EE c,
+    0F c, F6 c, 80 c, F6 c, 10 c, 77 c, 23 c, 13 c,
+    7B c, FE c, F1 c, 20 c, 08 c, 7A c, FE c, 27 c,
+    20 c, 03 c, 11 c, bitmap , 10 c, CC c, 0D c,
+    20 c, C7 c, FD c, E9 c,
+
+decimal
+
+: life
+    begin
+        update-world call
+    0 until
+;
+
+: gen-rows
+    do
+        64 0 do
+            1+ dup c@ 3 and 3 = i j rot plot
+        loop
+    loop
+;
+
+: gen-life
+    15403 @ 4095 and
+    2 0 gen-rows
+    [ 9216 23 32 * + ] literal [ 9216 22 32 * + ] literal do
+        i c@ i 32 + c!
+    loop
+    46 0 gen-rows
+    drop
+    life
+;
+
